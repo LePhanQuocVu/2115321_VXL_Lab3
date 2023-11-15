@@ -25,7 +25,7 @@ Core/Src/automatic.o: ../Core/Src/automatic.c ../Core/Inc/automatic.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
  ../Core/Inc/software_timer.h ../Core/Inc/automatic.h \
- ../Core/Inc/manual.h
+ ../Core/Inc/manual.h ../Core/Inc/button.h
 
 ../Core/Inc/automatic.h:
 
@@ -88,3 +88,5 @@ Core/Src/automatic.o: ../Core/Src/automatic.c ../Core/Inc/automatic.h \
 ../Core/Inc/automatic.h:
 
 ../Core/Inc/manual.h:
+
+../Core/Inc/button.h:

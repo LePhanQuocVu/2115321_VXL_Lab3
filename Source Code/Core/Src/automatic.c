@@ -7,7 +7,7 @@
 
 
 #include "automatic.h"
-
+#include "button.h"
 void fsm_automatic_run() {
 	switch (status) {
 	case INIT:
@@ -28,7 +28,7 @@ void fsm_automatic_run() {
 			status = AUTO_YELLOW;
 			setTimer1(200);
 		}
-		if(isPressButton()==1) {
+		if(isPressButton1()==1) {
 			status = MAN_RED;
 			setTimer1(1000);
 		}

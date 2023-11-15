@@ -17,7 +17,7 @@ void fsm_manual_run() {
 				status = AUTO_RED;
 				setTimer1(500);
 			}
-			if(isPressButton() == 1) {
+			if(isPressButton1() == 1) {
 				status = MAN_YELLOW;
 				setTimer1(1000);
 			}
