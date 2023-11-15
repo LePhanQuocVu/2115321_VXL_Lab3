@@ -7,28 +7,18 @@
 
 #ifndef INC_BUTTON_H_
 #define INC_BUTTON_H_
-#include"main.h"
 
-#define NORMAL_STATE GPIO_PIN_SET
-#define PRESS_STATE GPIO_PIN_RESET
+#include "main.h"
+#include "software_timer.h"
 
-extern int button1_flag;
-extern int button2_flag;
-extern int button3_flag;
+#define NORMAL_STATE	GPIO_PIN_SET
+#define PRESSED_STATE	GPIO_PIN_RESET
 
-//button1
+#define numberButtons	3
 
-int isPressButton1();
-void getButton1Input();
+int isButtonPressed(int nameButton);
+void getKeyInput();
 
-//button2
-
-int isPressButton2();
-void getButton2Input();
-
-//button 3
-int isPressButton3();
-void getButton3Input();
 
 
 #endif /* INC_BUTTON_H_ */

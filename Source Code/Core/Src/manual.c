@@ -13,10 +13,10 @@ void fsm_manual_run() {
 			HAL_GPIO_WritePin(Led_red_GPIO_Port, Led_red_Pin, GPIO_PIN_RESET);
 			HAL_GPIO_WritePin(Led_yellow_GPIO_Port, Led_yellow_Pin, GPIO_PIN_SET);
 			HAL_GPIO_WritePin(Led_green_GPIO_Port, Led_green_Pin, GPIO_PIN_SET);
-			if(timer1_flag == 1) {
-				status = AUTO_RED;
-				setTimer1(500);
-			}
+//			if(timer1_flag == 1) {
+//				status = AUTO_RED;
+//				setTimer1(500);
+//			}
 			if(isPressButton1() == 1) {
 				status = MAN_YELLOW;
 				setTimer1(1000);

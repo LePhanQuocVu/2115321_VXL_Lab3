@@ -25,7 +25,7 @@ Core/Src/manual.o: ../Core/Src/manual.c ../Core/Inc/manual.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
  ../Core/Inc/software_timer.h ../Core/Inc/automatic.h \
- ../Core/Inc/manual.h
+ ../Core/Inc/manual.h ../Core/Inc/fms_traffic.h
 
 ../Core/Inc/manual.h:
 
@@ -88,3 +88,5 @@ Core/Src/manual.o: ../Core/Src/manual.c ../Core/Inc/manual.h \
 ../Core/Inc/automatic.h:
 
 ../Core/Inc/manual.h:
+
+../Core/Inc/fms_traffic.h:
