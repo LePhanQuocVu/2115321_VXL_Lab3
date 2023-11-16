@@ -9,6 +9,7 @@
 #include "global.h"
 #include "convertMode.h"
 #include "software_timer.h"
+#include "display7Seg.h"
 void fsm_convert_mode(){
 	switch (led_status){
 	case MODE2_RED:
@@ -25,7 +26,7 @@ void fsm_convert_mode(){
 			}
 		}
 
-		if (isButtonPressed(0) == 1){
+		if (isButtonPressed(0) == 1){ // convert Mode
 			setTimer4(1);
 			led_status = MODE3_YELLOW;
 
@@ -33,13 +34,13 @@ void fsm_convert_mode(){
 			timerRoad2 = 3;
 		}
 
-		if (isButtonPressed(1) == 1){
+		if (isButtonPressed(1) == 1){ // click button2 -> increase timRed
 			redMode2++;
 			timerRoad1++;
 			if (redMode2 >= 100) redMode2 = 2;
 		}
 
-		if (isButtonPressed(2) == 1){
+		if (isButtonPressed(2) == 1){ // lick button3 -> setValue
 			redTime = redMode2;
 		}
 		break;
@@ -58,20 +59,20 @@ void fsm_convert_mode(){
 			}
 		}
 
-		if (isButtonPressed(0) == 1){
+		if (isButtonPressed(0) == 1){ //click button1 -> convert Mode 4
 			setTimer5(1);
 			led_status = MODE4_GREEN;
 
 			timerRoad1 = greenTime;
 			timerRoad2 = 4;
 		}
-		if (isButtonPressed(1) == 1){
+		if (isButtonPressed(1) == 1){ // click button2 -> increase timeYellow
 			yellowMode3++;
 			timerRoad1++;
 			if (yellowMode3 >= redTime) yellowMode3 = 1;
 		}
 
-		if (isButtonPressed(2) == 1){
+		if (isButtonPressed(2) == 1){ // click button3 -> setValue
 			yellowTime=yellowMode3;
 		}
 		break;
@@ -90,7 +91,7 @@ void fsm_convert_mode(){
 			}
 		}
 
-		if (isButtonPressed(0) == 1){
+		if (isButtonPressed(0) == 1){	//click button1 -> convert to MODE2
 			led_status = MODE2_RED;
 			greenTime = redTime - yellowTime;
 			timerRoad1 = redTime;
@@ -102,17 +103,16 @@ void fsm_convert_mode(){
 			//to display new value of 7SEG
 			setTimer4(1);
 			index_led=0;
-			clearSignal();
-
+			 clearAllEN();
 		}
 
-		if (isButtonPressed(1) == 1){
+		if (isButtonPressed(1) == 1){		//click button2 -> increase timeGreen
 			greenMode4++;
 			timerRoad1++;
 			if (greenMode4 >= redTime) greenMode4 = 1;
 		}
 
-		if (isButtonPressed(2) == 1){
+		if (isButtonPressed(2) == 1){	//click button3 -> setValue
 			greenTime = greenMode4;
 			yellowTime = redTime - greenTime;
 		}

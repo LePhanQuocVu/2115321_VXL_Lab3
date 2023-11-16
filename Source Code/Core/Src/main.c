@@ -98,11 +98,22 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   led_status = INIT;
-
+  	 setTimer3(1);
+   setTimer4(1);
   while (1)
   {
-	  fsm_traffic_light_run();
+	  if (timer3_flag == 1){
+			  setTimer3(10);
+			  updateLedBuffer();
+		  }
 
+		  if (timer4_flag == 1){
+			  setTimer4(25);
+			  update7SEG(index_led++);
+			  if (index_led >= 4) index_led = 0;
+		  }
+		  fsm_traffic_light_run();
+		  fsm_convert_mode();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

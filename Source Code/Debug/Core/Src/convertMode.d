@@ -26,7 +26,7 @@ Core/Src/convertMode.o: ../Core/Src/convertMode.c ../Core/Inc/global.h \
  ../Core/Inc/button.h ../Core/Inc/software_timer.h \
  ../Core/Inc/fms_traffic.h ../Core/Inc/global.h ../Core/Inc/display7seg.h \
  ../Core/Inc/convertMode.h ../Core/Inc/convertMode.h \
- ../Core/Inc/software_timer.h
+ ../Core/Inc/software_timer.h ../Core/Inc/display7Seg.h
 
 ../Core/Inc/global.h:
 
@@ -95,3 +95,5 @@ Core/Src/convertMode.o: ../Core/Src/convertMode.c ../Core/Inc/global.h \
 ../Core/Inc/convertMode.h:
 
 ../Core/Inc/software_timer.h:
+
+../Core/Inc/display7Seg.h:

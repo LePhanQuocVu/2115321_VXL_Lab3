@@ -124,7 +124,7 @@ void clearAllEN() {
 
 
 void update7SEG(int index){
-	clearSignal();
+	 clearAllEN();
 	display7SEG(led_buffer[index]);
 	switch(index){
 	case 0:
