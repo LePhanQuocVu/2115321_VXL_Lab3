@@ -12,13 +12,13 @@ int keyReg1[numberButtons] = {NORMAL_STATE,NORMAL_STATE,NORMAL_STATE};
 int keyReg2[numberButtons] = {NORMAL_STATE,NORMAL_STATE,NORMAL_STATE};
 int keyReg3[numberButtons] = {NORMAL_STATE,NORMAL_STATE,NORMAL_STATE};
 
-int TimeOutForKeyPress[numberButton] =  {200, 200, 200};
+int timeOutForKeyPress[numberButtons] =  {200, 200, 200};
 
 /*
  Declare cycle counters to determine the two possible
  events of the button
  */
-int timeOutForKeyPress[numberButtons] = {0};
+
 int button_flag[numberButtons] = {0, 0, 0};
 //--------------//
 
@@ -72,15 +72,15 @@ void getKeyInput()
 				if(keyReg2[i] == PRESSED_STATE)
 				{
 					subKeyProcess(i);
-					TimeOutForKeyPress[i] = 200;
+					timeOutForKeyPress[i] = 200;
 				}
 			}
 
 			else
 			{
 				timeOutForKeyPress[i]--;
-				if (TimeOutForKeyPress[i] == 0){
-					KeyReg3[i] = NORMAL_STATE;
+				if (timeOutForKeyPress[i] == 0){
+					keyReg3[i] = NORMAL_STATE;
 				}
 
 			}

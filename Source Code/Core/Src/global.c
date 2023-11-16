@@ -14,9 +14,10 @@ int greenTime = 2;
 int yellowTime = 3;
 
 
-int newRed = 0;
-int newGreen = 0;
-int newYellow = 0;
+int redMode2 = 0;
+int yellowMode3 = 0;
+int greenMode4 = 0;
+
 int toggle = 0;
 
 
@@ -32,3 +33,4 @@ void updateLedBuffer(){
 	led_buffer[2] = timerRoad2 / 10;
 	led_buffer[3] = timerRoad2 % 10;
 }
+int led_status = 0;

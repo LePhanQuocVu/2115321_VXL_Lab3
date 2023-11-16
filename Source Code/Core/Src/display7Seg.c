@@ -9,7 +9,7 @@
 #include "display7Seg.h"
 
 
-void update7SEG(int num) {
+void display7SEG(int num) {
 	switch (num) {
 	case 0:
 		HAL_GPIO_WritePin(P0_GPIO_Port, P0_Pin, RESET);
@@ -142,4 +142,37 @@ void update7SEG(int index){
 	default:
 		break;
 	}
+}
+
+
+void offLed() {
+	HAL_GPIO_WritePin(Led_red_GPIO_Port, Led_red_Pin, SET);
+	HAL_GPIO_WritePin(Led_yellow_GPIO_Port, Led_yellow_Pin, SET);
+	HAL_GPIO_WritePin(Led_green_GPIO_Port, Led_green_Pin, SET);
+
+	HAL_GPIO_WritePin(Led_red2_GPIO_Port, Led_red2_Pin, SET);
+		HAL_GPIO_WritePin(Led_yellow2_GPIO_Port, Led_yellow2_Pin, SET);
+		HAL_GPIO_WritePin(Led_green2_GPIO_Port, Led_green2_Pin, SET);
+}
+
+void onRed1() {
+	HAL_GPIO_WritePin(Led_red_GPIO_Port, Led_red_Pin, SET);
+}
+void onYellow1() {
+	HAL_GPIO_WritePin(Led_yellow_GPIO_Port, Led_yellow_Pin, SET);
+}
+void onGreen1(){
+	HAL_GPIO_WritePin(Led_green_GPIO_Port, Led_green_Pin, SET);
+
+}
+
+
+void onRed2() {
+	HAL_GPIO_WritePin(Led_red2_GPIO_Port, Led_red2_Pin, RESET);
+}
+void onYellow2(){
+	HAL_GPIO_WritePin(Led_yellow2_GPIO_Port, Led_yellow2_Pin, RESET);
+}
+void onGreen2(){
+	HAL_GPIO_WritePin(Led_green2_GPIO_Port, Led_green2_Pin, RESET);
 }

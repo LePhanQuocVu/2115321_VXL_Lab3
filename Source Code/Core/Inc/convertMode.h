@@ -9,5 +9,11 @@
 #define INC_CONVERTMODE_H_
 
 
+#include "global.h"
+#include "fms_traffic.h"
+#include "display7seg.h"
+#include "button.h"
+
+void fsm_convert_mode();
 
 #endif /* INC_CONVERTMODE_H_ */

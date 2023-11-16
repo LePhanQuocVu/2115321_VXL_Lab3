@@ -1,6 +1,5 @@
-Core/Src/manual.o: ../Core/Src/manual.c ../Core/Inc/manual.h \
- ../Core/Inc/global.h ../Core/Inc/button.h ../Core/Inc/main.h \
- ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
+Core/Src/convertMode.o: ../Core/Src/convertMode.c ../Core/Inc/global.h \
+ ../Core/Inc/main.h ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
  ../Core/Inc/stm32f1xx_hal_conf.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h \
@@ -24,14 +23,12 @@ Core/Src/manual.o: ../Core/Src/manual.c ../Core/Inc/manual.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
- ../Core/Inc/software_timer.h ../Core/Inc/automatic.h \
- ../Core/Inc/manual.h ../Core/Inc/fms_traffic.h
-
-../Core/Inc/manual.h:
+ ../Core/Inc/button.h ../Core/Inc/software_timer.h \
+ ../Core/Inc/fms_traffic.h ../Core/Inc/global.h ../Core/Inc/display7seg.h \
+ ../Core/Inc/convertMode.h ../Core/Inc/convertMode.h \
+ ../Core/Inc/software_timer.h
 
 ../Core/Inc/global.h:
-
-../Core/Inc/button.h:
 
 ../Core/Inc/main.h:
 
@@ -83,10 +80,18 @@ Core/Src/manual.o: ../Core/Src/manual.c ../Core/Inc/manual.h \
 
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h:
 
+../Core/Inc/button.h:
+
 ../Core/Inc/software_timer.h:
 
-../Core/Inc/automatic.h:
-
-../Core/Inc/manual.h:
-
 ../Core/Inc/fms_traffic.h:
+
+../Core/Inc/global.h:
+
+../Core/Inc/display7seg.h:
+
+../Core/Inc/convertMode.h:
+
+../Core/Inc/convertMode.h:
+
+../Core/Inc/software_timer.h:

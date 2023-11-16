@@ -9,11 +9,12 @@
 #define INC_FMS_TRAFFIC_H_
 
 #include "global.h"
-#include "traffic_light.h"
+
 #include "display7seg.h"
 #include "button.h"
 
-void fsm_traffic_light();
+void fsm_traffic_light_run();
+
 
 
 #endif /* INC_FMS_TRAFFIC_H_ */

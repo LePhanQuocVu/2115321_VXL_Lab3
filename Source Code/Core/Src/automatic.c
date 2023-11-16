@@ -9,7 +9,7 @@
 #include "automatic.h"
 #include "button.h"
 void fsm_automatic_run() {
-	switch (status) {
+	switch (led_status) {
 	case INIT:
 		//todo
 		HAL_GPIO_WritePin(Led_red_GPIO_Port, Led_red_Pin, GPIO_PIN_SET);
